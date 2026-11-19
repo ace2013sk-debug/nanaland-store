@@ -4,7 +4,7 @@
   var ST={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
   function toast(m){var t=document.getElementById('nn-ts');if(!t){t=document.createElement('div');t.id='nn-ts';t.style.cssText='position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#333;color:#fff;padding:12px 20px;border-radius:24px;font-size:13px;z-index:99;max-width:86vw;text-align:center';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(window.__nt);window.__nt=setTimeout(function(){t.style.display='none'},2200)}
   window.nnToast=toast;
-  var CATS={all:{t:'상품전체',l:[0,1,2,3,4,5]},best:{t:'베스트',l:[0,1,2,3,4,5],rk:1},budget:{t:'가계부 에이전트',l:[0,1,2,4]},asset:{t:'자산·투자',l:[3,5]}};
+  var CATS={all:{t:'상품전체',l:[0,1,2,3,4,5,6,7]},best:{t:'베스트',l:[0,1,2,3,4,5,6,7],rk:1},budget:{t:'가계부 에이전트',l:[0,1,2,4]},asset:{t:'자산·투자',l:[3,5]}};
   var PANELS={
     live:['📺 쇼핑 LIVE','예정된 라이브가 없습니다.','라이브 일정이 등록되면 ‘알림받기’를 설정한 고객께 안내됩니다. [확인 필요]'],
     notice:['📢 공지사항','등록된 공지사항이 없습니다.','스토어 소식이 생기면 이곳에 게시됩니다.'],
@@ -30,7 +30,7 @@
       pn.innerHTML='<div style="font-size:54px">'+p[0].split(' ')[0]+'</div><h4 style="font-size:20px;margin:14px 0 8px">'+p[1]+'</h4><p style="color:#888;font-size:14px;line-height:1.7">'+p[2]+'</p>'+(k==='live'?'<button id="nn-lv" style="margin-top:22px;border:1px solid #ccc;background:#fff;padding:10px 24px;cursor:pointer;font-family:inherit">🔔 알림받기</button>':'')+'<div><button id="nn-all" style="margin-top:22px;border:0;background:#8a5cf0;color:#fff;padding:12px 28px;cursor:pointer;font-family:inherit;font-weight:700">상품 보러 가기</button></div>';
       var b=document.getElementById('nn-all');b.onclick=function(){go('all')};var l=document.getElementById('nn-lv');if(l)l.onclick=function(){alarm(true)};}
     else{var list,title;
-      if(k==='foryou'){var r=recent().map(function(n){return n-1}).filter(function(i){return i>=0&&i<6});var seen={};r=r.filter(function(i){return seen[i]?0:(seen[i]=1)});
+      if(k==='foryou'){var r=recent().map(function(n){return n-1}).filter(function(i){return i>=0&&i<8});var seen={};r=r.filter(function(i){return seen[i]?0:(seen[i]=1)});
         if(r.length){list=r;title='FOR YOU · 최근 본 상품'}else{list=[0,3,4];title='FOR YOU · 이런 상품은 어때요?'}}
       else{list=CATS[k].l;title=CATS[k].t}
       sec.textContent=title;sort.style.display='';pn.style.display='none';g.style.display='';window.drawCards(list,k==='best');}

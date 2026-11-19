@@ -18,7 +18,7 @@ nav{border-top:1px solid #e5e5e5;border-bottom:2px solid #e5e5e5;height:72px}nav
 .sec{text-align:center;padding:68px 0 22px}.sec h3{font-size:30px;font-weight:800}
 .sort{display:flex;justify-content:center;gap:0;margin:34px 0 56px;font-size:14px;color:#aaa;flex-wrap:wrap}.sort a{padding:0 14px;border-left:1px solid #ddd;cursor:pointer;line-height:14px}.sort a:first-child{border:0}.sort a.on{color:#111;font-weight:800}.sort a.on:before{content:"✓ "}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:48px 20px;padding-bottom:70px}
-.card{position:relative;cursor:pointer}.card .im{aspect-ratio:1/1;overflow:hidden;background:#eee}.card .im img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}.card:hover .im img{transform:scale(1.04)}
+.card{position:relative;cursor:pointer}.rk{position:absolute;left:0;top:0;background:#8a5cf0;color:#fff;font-size:11px;font-weight:800;padding:4px 9px}.card .im{aspect-ratio:1/1;overflow:hidden;background:#eee}.card .im img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}.card:hover .im img{transform:scale(1.04)}
 .card h4{font-size:14px;font-weight:400;line-height:1.35;margin:14px 28px 8px 4px;height:38px;overflow:hidden}.card .ds{font-size:12px;color:#888;margin:0 4px 8px;height:30px;line-height:1.25;overflow:hidden}
 .pr{margin:0 4px;font-size:15px;font-weight:800;color:#d71a2b}.pr small{font-size:12px;font-weight:400;color:#999;margin-left:4px}.tag{display:inline-block;margin:8px 4px 0;font-size:11px;color:#8a5cf0;border:1px solid #cdb8f5;border-radius:3px;padding:1px 6px}
 .tt{position:relative}.hrt{position:absolute;right:2px;top:12px;font-size:20px;color:#ccc;cursor:pointer;user-select:none}.hrt.on{color:#e0396b}
@@ -86,6 +86,8 @@ nav .w a{white-space:nowrap;flex:0 0 auto}nav .w{scrollbar-width:none}nav .w::-w
 .cap2{font-family:"Nanum Pen Script","Gamja Flower",sans-serif;font-size:24px!important}
 .box{font-family:"Gowun Dodum",sans-serif}
 @media(max-width:800px){.warn b{font-size:22px}.hk h2{font-size:27px}.ask h3{font-size:25px}.big b{font-size:64px}.gh h3{font-size:23px}.mh h4{font-size:20px}.pn p{font-size:17px}}
+
+.bd{margin-top:14px;padding:12px 14px;border-radius:12px;background:#fff1f5;color:#d6336c;font-size:13px;font-weight:700;line-height:1.7}.bd a{text-decoration:underline;margin:0 2px}
 </style></head><body>
 <div class="top"><div class="w"><b>나나랜드 스토어</b><div><span>관심 스토어</span><span>마이페이지</span><span>장바구니</span></div></div></div>
 <div class="bar"><div class="w"><div class="ava">나나</div><div class="d">가계부·재무 관리 에이전트 전문 스토어<i>|</i>관심고객수 [확인 필요]</div><div class="sch"><span>검색어를 입력해주세요</span>🔍</div></div></div>
@@ -100,7 +102,7 @@ nav .w a{white-space:nowrap;flex:0 0 auto}nav .w{scrollbar-width:none}nav .w::-w
 <dl><dt>배송 방법</dt><dd>무료배송 [확인 필요]</dd><dt>상품 형태</dt><dd>[확인 필요]</dd><dt>샘플 화면</dt><dd>샘플 데이터 화면 12종 · 사용 매뉴얼 포함</dd></dl>
 <div class="opt"><span>옵션 선택 [확인 필요]</span><span>▾</span></div>
 <div class="btns"><a class="smp" href="https://ace2013sk-debug.github.io/household-dashboard/sample.html" target="_blank" rel="noopener">샘플 화면 보기</a><button class="buy" onclick="toast()">구매하기</button><button onclick="toast()">장바구니</button></div>
-<div class="note">※ 현재 판매 준비 중인 시안 페이지입니다. 상품 형태·옵션은 확정 후 반영됩니다.</div></div></div>
+<div class="bd">🎁 묶음 특가! 여러 개 사면 더 저렴해요<br>· <a href="../7/">원하는 3종 15,000원</a> (49% 할인) · <a href="../8/">6종 전체 25,000원</a> (58% 할인)</div><div class="note">※ 현재 판매 준비 중인 시안 페이지입니다. 상품 형태·옵션은 확정 후 반영됩니다.</div></div></div>
 <div class="tabs" id="tb"><a class="on" href="#d">상세정보</a><a href="#rv">리뷰 0</a><a href="#qa">Q&amp;A</a><a href="#rt">반품/교환정보</a></div>
 <div class="dt" id="d">
 <div class="warn"><div class="wi">📣</div><b>잠깐! 아직도 이렇게 가계부 쓰세요?</b><p>기록은 열심히 하는데, 정리하고 분석하는 건 늘 뒷전이었다면<br>이제는 <u>화면이 대신 읽어드립니다.</u></p></div>
