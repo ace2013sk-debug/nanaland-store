@@ -108,7 +108,7 @@ nav .w a{white-space:nowrap;flex:0 0 auto}nav .w{scrollbar-width:none}nav .w::-w
 <div class="crumb"><a href="../../">나나랜드 스토어</a> &gt; 전체상품 &gt; 에이전트 6종 전체 패키지</div>
 <div class="main">
 <div class="ph"><img src="../../img/p8_rep.jpg" alt="에이전트 6종 전체 패키지"></div>
-<div class="inf"><h1>에이전트 6종 전체 패키지</h1><div class="sub">6종 전부를 25,000원에 · 에이전트 1개당 9,900원 → 묶으면 더 저렴!</div>
+<div class="inf"><h1>에이전트 6종 전체 패키지</h1><div class="rsum" id="rsum"></div><div class="sub">6종 전부를 25,000원에 · 에이전트 1개당 9,900원 → 묶으면 더 저렴!</div>
 <div class="price"><span class="old">59,400원</span>25,000원<span class="offb">58% 할인</span></div>
 <dl><dt>배송 방법</dt><dd>무료배송 [확인 필요]</dd><dt>절약 금액</dt><dd><b style="color:#d6336c">34,400원</b> 절약 (정가 합계 59,400원 기준)</dd></dl>
 <div class="pick"><div class="ph2"><span>포함된 에이전트 6종</span><span id="cnt">6 / 6 포함</span></div><div class="pk on" data-i="1" data-p="9900"><img src="../../img/p1_rep.jpg" alt=""><b>2026년 구글시트 가계부 에이전트<br><i>9,900원</i></b><span class="ck">✓</span></div><div class="pk on" data-i="2" data-p="9900"><img src="../../img/p2_rep.jpg" alt=""><b>뱅크샐러드 뱅셀 가계부 에이전트<br><i>9,900원</i></b><span class="ck">✓</span></div><div class="pk on" data-i="3" data-p="9900"><img src="../../img/p3_rep.jpg" alt=""><b>엑셀 가계부 대시보드 에이전트<br><i>9,900원</i></b><span class="ck">✓</span></div><div class="pk on" data-i="4" data-p="9900"><img src="../../img/p4_rep.jpg" alt=""><b>모두의 주식 에이전트<br><i>9,900원</i></b><span class="ck">✓</span></div><div class="pk on" data-i="5" data-p="9900"><img src="../../img/p5_rep.jpg" alt=""><b>우리 가족 재무 에이전트<br><i>9,900원</i></b><span class="ck">✓</span></div><div class="pk on" data-i="6" data-p="9900"><img src="../../img/p6_rep.jpg" alt=""><b>자산·투자 현황 에이전트<br><i>9,900원</i></b><span class="ck">✓</span></div></div>
@@ -150,4 +150,4 @@ else picks.forEach(function(p){p.style.cursor='default'});
 document.getElementById('buy').onclick=function(){var n=picks.filter(function(p){return p.classList.contains('on')}).length;if(K===3&&n<K){nnToast('에이전트 '+K+'개를 선택해 주세요. (현재 '+n+'개)');return}nnToast('판매 준비 중입니다.')};
 upd();
 document.querySelectorAll('.top b').forEach(function(b){b.style.cursor='pointer';b.onclick=function(){location.href='../../'}});
-</script><script src="/nanaland-store/nav.js"></script></body></html>
+</script><script src="/nanaland-store/reviews.js"></script><script src="/nanaland-store/rev.js"></script><script src="/nanaland-store/nav.js"></script></body></html>
