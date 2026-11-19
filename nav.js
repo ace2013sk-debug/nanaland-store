@@ -57,3 +57,9 @@
   /* 인덱스: ?c= 초기 상태 */
   if(isIdx){var q=(location.search.match(/[?&]c=(\w+)/)||[])[1];if(q&&(CATS[q]||PANELS[q]||q==='foryou'))setTimeout(function(){go(q)},60)}
 })();
+
+;(function(){function sh(){var u=location.href.split('?')[0],t=document.title;if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return}
+ function ok(){window.nnToast&&nnToast('링크를 복사했습니다.')}
+ try{navigator.clipboard.writeText(u).then(ok,function(){prompt('링크를 복사해 주세요',u)})}catch(e){prompt('링크를 복사해 주세요',u)}}
+ document.querySelectorAll('.fab div[title="공유"]').forEach(function(b){b.id='nn-share';b.style.cursor='pointer';b.onclick=sh});
+ document.querySelectorAll('.fab div[title="맨 위로"]').forEach(function(b){b.style.cursor='pointer'})})();
